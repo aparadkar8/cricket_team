@@ -1,0 +1,17 @@
+<!-- app/views/players/_player_card.html.erb -->
+<% player_card_classes = "col mb-4" %>
+<div class="<%= player_card_classes %>">
+  <div class="card">
+    <div class="card-body">
+    <br/>
+      <h5 class="card-title"><%= player.name %></h5>
+      <p class="card-text">Age: <%= player.age %></p>
+      <p class="card-text">Stats: <%= player.statistic%></p>
+      <%= link_to 'Edit', edit_player_path(player), class: 'btn btn-primary' %>
+      <%= link_to 'Delete', player, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    </div>
+  </div>
+</div>
+
+
+

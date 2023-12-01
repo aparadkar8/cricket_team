@@ -1,0 +1,7 @@
+<%= turbo_stream.prepend "players" do %>
+  <%= render "player", player: @player %>
+<% end %>
+<%= turbo_stream.replace "#{dom_id(Player.new)}_form" do %>
+  <%= render "form", player: Player.new %>
+<% end %>
+
